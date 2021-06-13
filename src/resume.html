@@ -1,0 +1,80 @@
+---
+layout: empty
+eleventyExcludeFromCollections: true
+title: zweimach's resume
+---
+
+<main class="max-w-screen-lg mx-auto my-6 p-6 bg-white">
+  <div class="flex mb-2">
+    <div class="flex-none w-40 mt-4 ml-4">
+      <img class="rounded-full w-40 h-40" src="{{ '/assets/images/user.jpg' | url }}" alt="zweimach" />
+    </div>
+    <div class="flex-1 p-4">
+      <h1 class="font-serif text-4xl leading-tight">Ananda Umamil</h1>
+      <h2 class="text-2xl leading-tight">Software Engineer</h2>
+      <p class="py-4">
+        I have a passion for computer science and mathematics. I used to hate math but then fell in love with it because
+        of Haskell and functional programming. I build web applications and text-processing tools.
+      </p>
+    </div>
+  </div>
+  <div class="flex mb-8">
+    <div class="flex-none w-40 ml-4 pt-4 border-t-4 border-gray-400">Contact</div>
+    <div class="flex-1 pt-5 px-4">
+      <ul class="flex">
+        {% for contact in resume.contacts %}
+        <li class="mx-3 hover:text-gray-600">
+          <a rel="noopener noreferrer" target="_blank" href="{{ contact.href }}" class="flex items-center">
+            <img class="w-5 h-5" src="{{ contact.icon | url }}" alt="{{ contact.title }}" />&nbsp;{{ contact.title }}
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+  <div class="flex mb-8">
+    <div class="flex-none w-40 ml-4 pt-4 border-t-4 border-gray-400">Experience</div>
+    <div class="flex-1 pt-5 px-4">
+      <ul class="">
+        {% for experience in resume.experiences %}
+        <li>
+          <div class="flex justify-between">
+            <div class="font-bold">{{ experience.company }}</div>
+            <div>{{ experience.date }}</div>
+          </div>
+          <div>{{ experience.position }}</div>
+          <div>{{ experience.details }}</div>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+  <div class="flex mb-8">
+    <div class="flex-none w-40 ml-4 pt-4 border-t-4 border-gray-400">Education</div>
+    <div class="flex-1 pt-5 px-4">
+      <ul class="">
+        {% for education in resume.educations %}
+        <li>
+          <div class="flex justify-between">
+            <div class="font-bold">{{ education.school }}</div>
+            <div>{{ education.date }}</div>
+          </div>
+          <div>{{ education.degree }} | {{ education.major }}</div>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+  <div class="flex mb-8">
+    <div class="flex-none w-40 ml-4 pt-4 border-t-4 border-gray-400">Skills</div>
+    <div class="flex-1 pt-5 px-4 grid grid-cols-4 text-base">
+      {% for skillset in resume.skills %}
+      <ul class="list-disc list-inside">
+        {% for skill in skillset %}
+        <li>{{ skill }}</li>
+        {% endfor %}
+      </ul>
+      {% endfor %}
+    </div>
+  </div>
+</main>

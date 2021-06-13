@@ -1,0 +1,46 @@
+{
+  "contacts": [
+    {
+      "href": "mailto:zweimach@zweimach.org",
+      "title": "zweimach@zweimach.org",
+      "icon": "/assets/images/icons/mail-line.svg"
+    },
+    {
+      "href": "https://github.com/zweimach",
+      "title": "zweimach",
+      "icon": "/assets/images/icons/github-line.svg"
+    },
+    {
+      "href": "https://www.linkedin.com/in/zweimach",
+      "title": "zweimach",
+      "icon": "/assets/images/icons/linkedin-box-line.svg"
+    },
+    {
+      "href": "https://twitter.com/zweimach",
+      "title": "@zweimach",
+      "icon": "/assets/images/icons/twitter-line.svg"
+    }
+  ],
+  "educations": [
+    {
+      "school": "Politeknik Keuangan Negara STAN",
+      "date": "2016 - 2017",
+      "degree": "Associate's degree",
+      "major": "Taxation"
+    }
+  ],
+  "experiences": [
+    {
+      "company": "Direktorat Jenderal Pajak Republik Indonesia",
+      "date": "Dec 2017 - Feb 2020",
+      "details": [""],
+      "position": "Administrative Assistant"
+    }
+  ],
+  "skills": [
+    ["Haskell", "Rust", "JavaScript", "PHP"],
+    ["HTML & CSS", "Node.js", "React", "Vue"],
+    ["Express", "MySQL/PostgreSQL", "Version Control (Git)", "TypeScript/Flow"],
+    ["Docker", "Linux", "Elm", "PureScript"]
+  ]
+}
